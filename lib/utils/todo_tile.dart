@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class ToDoTile extends StatelessWidget {
   final String taskname;
   final bool taskCompleted;
@@ -39,12 +40,12 @@ class ToDoTile extends StatelessWidget {
             ),
           ),
           trailing: ElevatedButton(
-            onPressed: () {},
-            child: Icon(
+            onPressed: () => deleteFunction(context),
+            style: ElevatedButton.styleFrom(
+                shape: const CircleBorder(), backgroundColor: Colors.red),
+            child: const Icon(
               Icons.delete,
             ),
-            style: ElevatedButton.styleFrom(
-                shape: CircleBorder(), backgroundColor: Colors.red),
           ),
         ),
       ),

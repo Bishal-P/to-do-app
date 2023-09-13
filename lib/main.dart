@@ -5,6 +5,7 @@ import 'package:task/screens/homepage.dart';
 void main() async {
   await Hive.initFlutter();
 
+  // ignore: unused_local_variable
   var box = await Hive.openBox('mybox');
   runApp(const MyApp());
 }
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
       theme: ThemeData(primarySwatch: Colors.deepPurple),
     );
   }

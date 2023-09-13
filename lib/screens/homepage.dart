@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
       db.toDoList.removeAt(index);
     });
     db.updateDatabase();
+    // print("deleted");
   }
 
   @override
@@ -67,7 +68,8 @@ class _HomePageState extends State<HomePage> {
                 taskname: db.toDoList[index][0],
                 taskCompleted: db.toDoList[index][1],
                 onChanged: (value) => checkBoxChanged(value, index),
-                deleteFunction: (context) => deleteTask,
+                // onPressed: () => deleteTask(index),
+                deleteFunction: (context) => deleteTask(index),
               );
             },
           ),
